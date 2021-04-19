@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    border:0;
+    outline:0;
+  }
+  body {
+    margin:0;
+    padding:0;
+	line-height: 1;
+    width: 100% !important;
+}
+
+
+
+
+/* No normal bullets please */
+ul {
+    list-style-type: none;
+  }
+  
+  li {
+    /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+    position: relative;
+    
+    /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+    margin: 0;
+    padding-bottom: 1em;
+    padding-left: .3px;
+  }
+  
+  /* The actual line being placed before each list item, tweak width and color as appropriate */
+  li:before {
+    background-color: #c00;
+    padding-left: 1px;
+    width: 1px;
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 5px;
+  }
+      
+  /* Start the line further down on the first list item */
+  li:first-child:before { top: 15px;  }
+  
+  /* Stop the line short on the final list item */
+  li:last-child:before { height: 6px; }
+
+      
+  /* Styles for the SVG bullet points */
+  .bullet { margin-left: -20px; width: 12px; fill: #c00; float: left; padding-right: 10px }
+  .bullet.big { width: 16px; margin-left: -22px; padding-right: 8px }
+  
+  a { color: #06e; }
+
+/* puntos */
+  div{
+    display: flex;
+    padding: 1em;
+    /* justify-content: center;
+    text-align: center;
+    align-items: center;  */
+    
+}
+/* div:hover {
+    border: 1px solid #f1c40f
+} */
+h2{
+    font-size: .9em;
+}
+h3{
+    font-size:.8em;
+}
+h4{
+    font-size:.7em;
+}
+.grid-container{
+    display:grid;
+    grid-template-rows: 30% 70%;
+    grid-column: 1/-1;
+    align-items: center;
+}
+.grid-description{
+    display:grid;
+    grid-template-columns: 30% 60%;
+}
+.description{
+    align-items: left;
+}
+.squares{
+    position: relative;
+    text-align: center;
+    display:grid;
+    grid-template-columns: 30% 30% 30%;
+}
+.squares div{
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height:21vh;
+    width: 25vw;
+}
+.squares-tecnology{
+    display:grid;
+    grid-template-columns: 30% 30% 30%;
+}
+.squares-tecnology div{
+    position: relative;
+    height:18vh;
+    width: 23vw;
+    margin: 1em;
+}
+.grid-container-aprende{
+    display:grid;
+    grid-template-rows: 10% 10% 30% 40%;
+    grid-column: 1/-1;
+    align-items: center; 
+}
+.squares-aprende{
+    display:grid;
+    grid-template-columns: 30% 30% 30%;
+}
+.squares-aprende div{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height:21vh;
+    width: 25vw;
+    margin-left: 80px;
+}
+.aprende-logo{
+    width: 15vw;
+    height:auto;
+}
+.container-aprende-logo{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+ .grid-container-workspace{
+    display:grid;
+    grid-template-rows:10% 15% 15% 15% 15%;
+    grid-column: 1/-1;
+    align-items: center;
+}
+.row{
+    width: 20%;
+    height: auto;
+}
+.tecnologia-educativa-container{
+    display:grid;
+    grid-template-rows:30% 20% 40%;
+    /* grid-column: 1/-1;
+    align-items: center; */
+}
+.title-workspace{
+    display:grid;
+    grid-template-columns: 30%  50%; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color:orange; 
+    height:.4vh;
+    align-items: left;
+    padding-top:15px;
+}
+.row-orange{
+    width: 15%;
+    height: auto;
+}
+.title-workspace-teme{
+    display:grid;
+    grid-template-rows: 10% 20% 20% ;
+}
+
+.title-subtitle{
+    display:grid;
+    grid-template-columns: 30% 20% 30% ;  
+    height:.4vh;
+    align-items: left;
+}
+
+
+.element-workspace{
+    display:grid;
+    grid-template-rows:20% 20% 20% 20%;
+    /* grid-row-gap:2px; */
+    text-align: left;
+} 
+
+.square-workspace{
+    display:grid;
+    grid-template-rows: 30% 30% 30%;
+}
+.video-container-video{
+    display:grid;
+    grid-template-rows: 25% 15% 55%;
+}
+.grid-container-video{
+    display:grid;
+    grid-template-columns: 30% 50%;
+}
+.element-one{
+    display:grid;
+    grid-template-rows: 30% 70%;
+}
+.element-one-introduction{
+    display:grid;
+    grid-template-rows: 30% 70%;
+}
+.video-grid{
+    display:grid;
+    grid-template-rows:  70% 30%;
+}
+.youtube{
+    width:50vw;
+    height:50vh;
+}
+
+
+
+
+@media (max-width:480px){
+	.grid-container{
+		width:100%;
+        align-items: center;
+        width:100%;
+    overflow-x:hidden;
+	}
+    .youtube{
+        width:250px;
+        height:250px;
+        padding-left: 120px;
+    }
+}
+
+
